@@ -1,7 +1,6 @@
 package com.cauduro.performer.nandi.service;
 
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 import com.cauduro.performer.nandi.entity.UserEntity;
@@ -27,7 +26,7 @@ public class UserServiceImpl implements UserService {
   }
 
   @Override
-  public UserModel getUser(UUID id) {
+  public UserModel getUser(String id) {
     UserEntity user =
         repository.findById(id).orElseThrow(() -> new UserRuntimeException("no user found"));
     return mapper.toModel(user);
@@ -45,7 +44,7 @@ public class UserServiceImpl implements UserService {
   }
 
   @Override
-  public Boolean deleteUser(UUID id) {
+  public Boolean deleteUser(String id) {
     getUser(id); // throw exception if user did not exist
     repository.deleteById(id);
     return true;

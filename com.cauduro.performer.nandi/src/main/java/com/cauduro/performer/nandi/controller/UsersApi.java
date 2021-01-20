@@ -1,7 +1,6 @@
 package com.cauduro.performer.nandi.controller;
 
 import java.util.List;
-import java.util.UUID;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -33,7 +32,7 @@ public class UsersApi {
   }
 
   @GetMapping(value = "getUser/{userId}")
-  public ResponseEntity<UserModel> getUser(@PathVariable("userId") UUID userId) {
+  public ResponseEntity<UserModel> getUser(@PathVariable("userId") String userId) {
     UserModel serviceResponse = userService.getUser(userId);
     return ResponseEntity.ok(serviceResponse);
   }
@@ -51,7 +50,7 @@ public class UsersApi {
   }
 
   @DeleteMapping(value = "deleteUser/{userId}")
-  public ResponseEntity<Boolean> deleteUser(@PathVariable("userId") UUID userId) {
+  public ResponseEntity<Boolean> deleteUser(@PathVariable("userId") String userId) {
     Boolean serviceResponse = userService.deleteUser(userId);
     return ResponseEntity.ok(serviceResponse);
   }
