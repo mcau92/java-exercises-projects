@@ -26,7 +26,6 @@ public class UsersApi {
     this.userService = userService;
   }
 
-  @CrossOrigin(origins = "http://localhost:4200")
   @GetMapping(value = "fetchAllUsers")
   public ResponseEntity<List<UserModel>> fetchAllUsers() {
     List<UserModel> serviceResponse = userService.fetchAllUsers();
