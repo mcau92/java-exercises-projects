@@ -6,11 +6,11 @@ import com.cauduro.performer.nandi.models.UserModel;
 public interface UserService {
   List<UserModel> fetchAllUsers();
 
-  UserModel getUser(String id);
+  UserModel getUser(Integer id);
 
   UserModel inserNewUser(UserModel model);
 
   UserModel updateUser(UserModel model);
 
-  Boolean deleteUser(String id);
+  Boolean deleteUser(Integer id);
 }

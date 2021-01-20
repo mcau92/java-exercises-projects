@@ -32,7 +32,7 @@ public class UsersApi {
   }
 
   @GetMapping(value = "getUser/{userId}")
-  public ResponseEntity<UserModel> getUser(@PathVariable("userId") String userId) {
+  public ResponseEntity<UserModel> getUser(@PathVariable("userId") Integer userId) {
     UserModel serviceResponse = userService.getUser(userId);
     return ResponseEntity.ok(serviceResponse);
   }
@@ -50,7 +50,7 @@ public class UsersApi {
   }
 
   @DeleteMapping(value = "deleteUser/{userId}")
-  public ResponseEntity<Boolean> deleteUser(@PathVariable("userId") String userId) {
+  public ResponseEntity<Boolean> deleteUser(@PathVariable("userId") Integer userId) {
     Boolean serviceResponse = userService.deleteUser(userId);
     return ResponseEntity.ok(serviceResponse);
   }

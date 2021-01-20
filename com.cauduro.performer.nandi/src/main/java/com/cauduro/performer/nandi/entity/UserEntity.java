@@ -16,10 +16,9 @@ import lombok.Setter;
 public class UserEntity {
 
   @Id
-  @GeneratedValue(generator = "system-uuid")
-  @GenericGenerator(name = "system-uuid", strategy = "uuid")
+  @GeneratedValue
   @Column(name = "USERID")
-  private String userId;
+  private Integer userId;
 
   @Column(name = "NAME")
   private String name;

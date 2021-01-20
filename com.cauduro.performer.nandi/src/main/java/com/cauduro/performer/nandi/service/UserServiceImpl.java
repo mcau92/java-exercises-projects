@@ -26,7 +26,7 @@ public class UserServiceImpl implements UserService {
   }
 
   @Override
-  public UserModel getUser(String id) {
+  public UserModel getUser(Integer id) {
     UserEntity user =
         repository.findById(id).orElseThrow(() -> new UserRuntimeException("no user found"));
     return mapper.toModel(user);
@@ -44,7 +44,7 @@ public class UserServiceImpl implements UserService {
   }
 
   @Override
-  public Boolean deleteUser(String id) {
+  public Boolean deleteUser(Integer id) {
     getUser(id); // throw exception if user did not exist
     repository.deleteById(id);
     return true;
