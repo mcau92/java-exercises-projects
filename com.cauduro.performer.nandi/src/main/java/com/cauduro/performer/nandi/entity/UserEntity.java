@@ -4,8 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
-import org.hibernate.annotations.GenericGenerator;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -28,4 +28,8 @@ public class UserEntity {
 
   @Column(name = "CF")
   private String cf;
+
+  @Lob
+  @Column(name = "IMAGEMODEL")
+  private byte[] imageModel;
 }

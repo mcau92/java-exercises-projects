@@ -12,6 +12,7 @@ public class UserModel {
   private String name;
   private String surname;
   private String cf;
+  private String imageModel;
   private LocalDate dateOfBirth;
   private String placeOfBirth;
 }

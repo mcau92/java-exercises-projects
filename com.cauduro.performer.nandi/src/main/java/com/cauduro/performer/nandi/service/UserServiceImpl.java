@@ -1,8 +1,10 @@
 package com.cauduro.performer.nandi.service;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 import com.cauduro.performer.nandi.entity.UserEntity;
 import com.cauduro.performer.nandi.exception.UserRuntimeException;
 import com.cauduro.performer.nandi.mapping.UserMapping;
@@ -48,5 +50,13 @@ public class UserServiceImpl implements UserService {
     getUser(id); // throw exception if user did not exist
     repository.deleteById(id);
     return true;
+  }
+
+  @Override
+  public UserModel uploadImage(MultipartFile image, Integer userId) throws IOException {
+    UserEntity entity =
+        repository.findById(userId).orElseThrow(() -> new UserRuntimeException("no user found"));
+    entity.setImageModel(image.getBytes());
+    return mapper.toModel(repository.save(entity));
   }
 }
