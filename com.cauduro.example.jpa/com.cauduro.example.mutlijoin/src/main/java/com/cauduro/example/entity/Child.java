@@ -20,6 +20,7 @@ public class Child implements Serializable {
   private String name;
 
   @ManyToOne
+  @JoinColumn(name = "pid", referencedColumnName = "pid")
   @JoinColumn(name = "gid", referencedColumnName = "gid")
   @JoinColumn(name = "fk2", referencedColumnName = "fk2")
   private Parent parent;

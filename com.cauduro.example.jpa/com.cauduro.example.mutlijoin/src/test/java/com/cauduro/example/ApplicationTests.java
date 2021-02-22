@@ -24,6 +24,7 @@ class ApplicationTests {
     child.setName("child");
     // parent
     Parent parent = new Parent();
+    parent.setPid(45);
     parent.setFk2("fk2");
     Set<Child> childs = new HashSet<>();
     childs.add(child);
