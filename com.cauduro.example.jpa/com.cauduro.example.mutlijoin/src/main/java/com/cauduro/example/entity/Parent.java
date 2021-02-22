@@ -7,12 +7,13 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.PrePersist;
 
 @Entity
 @IdClass(ParentFk.class)
@@ -20,21 +21,13 @@ public class Parent implements Serializable {
 
   private static final long serialVersionUID = 1L;
 
-  @Id private Integer pid;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Integer pid;
 
   @Id
-  @Column(name = "gid")
-  private Integer gid;
-
-  @PrePersist
-  public void setgid() {
-    if (grandparent != null) {
-      this.gid = grandparent.getGid();
-    }
-  }
-
   @ManyToOne
-  @JoinColumn(name = "gid", referencedColumnName = "gid", insertable = false, updatable = false)
+  @JoinColumn(name = "gid", referencedColumnName = "gid")
   private GrandParent grandparent;
 
   @Id
@@ -66,14 +59,6 @@ public class Parent implements Serializable {
     this.grandparent = grandparent;
   }
 
-  public Integer getId() {
-    return pid;
-  }
-
-  public void setId(Integer id) {
-    this.pid = id;
-  }
-
   public String getFk2() {
     return fk2;
   }
@@ -92,13 +77,5 @@ public class Parent implements Serializable {
 
   public void setPid(Integer pid) {
     this.pid = pid;
-  }
-
-  public Integer getGid() {
-    return gid;
-  }
-
-  public void setGid(Integer gid) {
-    this.gid = gid;
   }
 }

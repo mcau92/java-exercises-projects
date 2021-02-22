@@ -9,15 +9,15 @@ public class ParentFk implements Serializable {
 
   private Integer pid;
 
-  private Integer gid;
+  private GrandParent grandparent;
 
   private String fk2;
 
   public ParentFk() {}
 
-  public ParentFk(Integer pid, Integer gid, String fk2) {
+  public ParentFk(Integer pid, GrandParent grandparent, String fk2) {
     this.pid = pid;
-    this.gid = gid;
+    this.grandparent = grandparent;
     this.fk2 = fk2;
   }
 
@@ -29,12 +29,12 @@ public class ParentFk implements Serializable {
     this.pid = pid;
   }
 
-  public Integer getGid() {
-    return gid;
+  public GrandParent getGrandparent() {
+    return grandparent;
   }
 
-  public void setGid(Integer gid) {
-    this.gid = gid;
+  public void setGrandparent(GrandParent grandparent) {
+    this.grandparent = grandparent;
   }
 
   public String getFk2() {
