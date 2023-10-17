@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1a4576ba-b7cc-4d95-8870-760ab5d28e4e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/receiver/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/receiver/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/receiver/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/receiver/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/receiver/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/receiver/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/receiver/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/receiver/src/main/java/com/example/cauduro/rabbitmq/receiver/Receiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/receiver/src/main/java/com/example/cauduro/rabbitmq/receiver/ReceiverApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/receiver/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/receiver/src/test/java/com/example/cauduro/rabbitmq/receiver/ReceiverApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sender/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sender/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sender/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sender/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sender/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sender/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sender/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sender/src/main/java/com/example/cauduro/rabbitmq/sender/Sender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sender/src/main/java/com/example/cauduro/rabbitmq/sender/SenderApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sender/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sender/src/test/java/com/example/cauduro/rabbitmq/sender/SenderApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2W4m9j6ygjHX9wPb1ais9Hdd8WL" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ReceiverApplication">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="rabbitmq" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cauduro.example.rabbitmq.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReceiverApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="receiver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.cauduro.rabbitmq.receiver.ReceiverApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SenderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="sender" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.cauduro.rabbitmq.sender.SenderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a4576ba-b7cc-4d95-8870-760ab5d28e4e" name="Changes" comment="" />
+      <created>1696000079820</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696000079820</updated>
+      <workItem from="1696000081175" duration="3482000" />
+      <workItem from="1696321720777" duration="925000" />
+      <workItem from="1697051880219" duration="598000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
