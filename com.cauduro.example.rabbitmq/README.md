@@ -1,53 +1,15 @@
 
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/mcau92/java-exercises-projects/edit/master/com.cauduro.example.rabbitmq">
+    <img src="rabb_img.png" alt="Logo" width="480" height="180">
   </a>
 
-<h3 align="center">Rabbitmq with Spring Boot and Docker Tutorial</h3>
+<h3 align="center">Rabbitmq with Spring Boot and Docker</h3>
 
   <p align="center">
-    Tutorial on how to connect two simple Spring boot app with event driven by Rabbitmq server on a Docker container
-    <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    Tutorial on how to connect two simple Spring boot app with Rabbitmq, as message broker, using Docker
   </p>
 </div>
 
@@ -67,15 +29,10 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#usage">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#links">Links</a></li>
   </ol>
 </details>
 
@@ -84,72 +41,56 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+This project explain how to get started in order to send message through 2 simple java applications, using Rabbitmq.
+Docker is used to host the Rabbitmq server, even for building and running automation
 
 
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![RabbitMQ](https://img.shields.io/badge/Rabbitmq-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white)
 
 ## Getting Started
 
-Download the project on your local machine and run, on the main folder, the docker compose command (See 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Download the project on your local machine and run, on the main folder, the docker compose command (See the Usage section]
+This will start 3 docker container for hosting Rabbitmq server and 2 java application.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+If you want to run this project on your machine you need:
+<ol>
+  <li>Java v.17</li>
+  <li>Maven v.3.9.2</li>
+  <li>Docker v.4.24.0 with Docker compose v.2.22.0</li>
+</ol>
 
-```
-Give examples
-```
+Or you can use an IDE with java and maven version already provided.
 
 ### Usage
 
-A step by step series of examples that tell you how to get a development env running
+Start Docker on your machine;
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+Then run, on the main folder, the following command
 
 ```
-until finished
+docker-compose up --build
+```
+or in MacOs/Linux
+
+```
+sudo docker-compose up --build
+```
+After the 3 containers started, go to http://localhost:8080 and type whatever you want for example:
+```
+http://localhost:8080/hello-it-works?
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Then you can easily view the log on the sender and recevier container that shows the message.!
 
+## Links
 
-## Built With
+You can follow also the [Spring AMQP](https://spring.io/guides/gs/messaging-rabbitmq/) for going deeper about rabbitmq technology
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
